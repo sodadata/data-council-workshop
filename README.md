@@ -22,16 +22,81 @@ In [the SodaCL documentation](https://docs.soda.io/soda-cl/row-count.html), you 
 
 ## Installing the Soda CLI
 
+Run convenience script `scripts/create_venv.sh`  
+Or run these commands individually:
+
+```shell
+rm -rf .venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+# pip install soda-core-postgres
+```
+
+You should see output like
+```
 TODO
+```
 
 ## Running the demo data docker container
 
-TODO
+Run convenience script `scripts/start_postgres.sh`
+Or run these commands individually:
+
+```shell
+cd postgres_demo_data
+docker-compose up
+```
+You should see output like
+
+```
+[data_council_workshop] scripts/02_start_postgres.sh 
+Starting postgres_demo_data_soda-sql-postgres_1 ... done
+Attaching to postgres_demo_data_soda-sql-postgres_1
+soda-sql-postgres_1  | ********************************************************************************
+soda-sql-postgres_1  | WARNING: POSTGRES_HOST_AUTH_METHOD has been set to "trust". This will allow
+soda-sql-postgres_1  |          anyone with access to the Postgres port to access your database without
+soda-sql-postgres_1  |          a password, even if POSTGRES_PASSWORD is set. See PostgreSQL
+...
+soda-sql-postgres_1  | waiting for server to start....LOG:  database system was shut down at 2022-03-19 09:35:46 UTC
+soda-sql-postgres_1  | LOG:  MultiXact member wraparound protections are now enabled
+soda-sql-postgres_1  | LOG:  database system is ready to accept connections
+soda-sql-postgres_1  | LOG:  autovacuum launcher started
+```
+
+Now you have a postgres database/warehouse with the demo data preloaded.
+
+[View the demo data on page postgres_demo_data/DATA.md](postgres_demo_data/DATA.md) 
 
 ## Registering a Soda Cloud account
 
-[Sign up for a Soda Cloud account](https://cloud.soda.io/signup)
+1. [Sign up for a Soda Cloud account](https://cloud.soda.io/signup)
+
+2. Open `configuration/configuration.yml` in your favorite text editor
+
+3. Create the API key.  In your Soda Cloud account, navigate to your avatar > Profile > API Keys, then click the plus icon to generate new API keys.
+
+![Create API key](images/soda_cloud_create_api_key.png)
+
+4. Copy the API Key ID, then paste it into the configuration.yml as the value for api_key.
+
+5. Copy the API Key Secret, then paste it into the configuration.yml as the value for api_secret.
+
+6. Save the changes to the configuration.yml file. Close the Create API Key dialog box in Soda Cloud.
 
 ## Running the checks
 
-TODO
+Run SodaCL file `checks/01_basic_checks.yml` 
+```shell
+soda scan -c configuration/configuration.yml -d workshop_ds checks/01_basic_checks.yml
+```
+
+Run SodaCL file `checks/02_advanced_and_cool.yml` 
+```shell
+soda scan -c configuration/configuration.yml -d workshop_ds checks/02_advanced_and_cool.yml
+```
+
+Run SodaCL file `checks/03_analyst_use_cases.yml` 
+```shell
+soda scan -c configuration/configuration.yml -d workshop_ds checks/03_analyst_use_cases.yml
+```

@@ -1,0 +1,47 @@
+checks for CUSTOMERS:
+
+  # Detailed schema expectations control
+  - schema:
+      fail:
+        when required column missing: ['id', 'size', 'distance']
+        when forbidden column present: ['email_address', 'pii_%']
+        when wrong column type:
+          id: varchar
+          distance: integer
+        when wrong column index:
+          id: 0
+
+      # And/or simple notifications on any schema change:
+      warn:
+        when schema changes: any
+
+  # Change over time requires a metric store
+  - change avg last 7 for row_count < 50
+
+  # Simple failed rows expression for a table
+  # Captures the failed rows as diagnostic information
+  # Performance considerations -> aggregation query
+  - failed rows:
+      name: High customers must have size less than 3
+      fail condition: cat = 'HIGH' and size >= 3
+
+  # Cross data source row count comparison. (can't be done as an afterthought)
+  - row_count same as CUSTOMERS_UPSTREAM in other_workshop_ds
+
+
+# Partitions are crucial for large, incremental datasets
+filter ORDERS [daily]:
+  where: TIMESTAMP '${START}' <= created_at AND created_at < '${END}'
+
+checks for ORDERS [daily]:
+  - row_count > 0
+  - freshness using created_at < 2h
+
+
+# Specify checks to be applied on a collection of tables
+for each table T:
+  tables:
+    - CUSTOME%
+    - ORDERS
+  checks:
+    - row_count > 0

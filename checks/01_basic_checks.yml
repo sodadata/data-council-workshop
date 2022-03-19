@@ -1,0 +1,30 @@
+checks for CUSTOMERS:
+
+  # Easy basic metric checks
+  - row_count > 0
+
+  - missing_count(pct) = 3:
+      missing values: ['N/A', 'No value']
+
+  - missing_count(id) = 0
+  - duplicate_count(id) = 0
+
+  - duplicate_count(cat, country) < 3
+
+  # And very configurable
+  - invalid_percent(pct) < 5 %:
+      missing values: ['N/A', 'No value']
+      valid format: percentage
+      valid length: 4
+
+      # missing regex: \ *
+      # valid regex: .*
+      # valid min: 0
+      # valid max: 100
+      # valid min length: 3
+      # valid max length: 5
+      # valid length: 16
+
+  # generating an error will:
+  #  - still execute the scan as much as possible
+  #  - produce detailed error report to enable self serve

@@ -1,0 +1,34 @@
+checks for CUSTOMERS:
+
+  # SQL-engine specific aggregation functions available! (non trivial in a generic solution)
+  - stddev_samp(size) between 3.26 and 3.27
+  - variance(size) between 10.65 and 10.66
+  - var_samp(size) between 10.65 and 10.66
+  - percentile(distance, 0.7) = 999
+
+  # First example of a template check for a particular use case.
+  - values in (country, zip) must exist in ZIP_CODES (country, zip)
+
+  # Often requested: apply checks on a filter
+  - valid_count(pct) = 2:
+      valid format: percentage
+      missing values: [No value, N/A, error]
+      filter: cat = 'HIGH' and country = 'BE'
+
+  # Custom metric with name and warn levels
+  - size_dst:
+      name: Absolute average size and distance product must be < 1000000
+      size_dst expression: ABS(AVG(size * distance))
+      warn: when > 1000000
+      fail: when > 1500000
+
+# If we haven't easy language coverage for it (yet!), SQL gives the ultimate flexibility
+checks:
+  - failed rows:
+      name: High customers must have size
+      fail query: |
+        SELECT *
+        FROM ORDERS as O
+             JOIN CUSTOMERS as C on O.customer_id_ok = C.id
+        WHERE C.cat = 'HIGH'
+              AND C.size > 0

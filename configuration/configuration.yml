@@ -1,0 +1,21 @@
+data_source workshop_ds:
+  type: postgres
+  connection:
+    host: localhost
+    port: 5432
+    username: soda
+  database: demo
+  schema: public
+
+data_source other_workshop_ds:
+  type: postgres
+  connection:
+    host: localhost
+    port: 5432
+    username: soda
+  database: demo
+  schema: public
+
+# soda_cloud:
+#   api_key: PUT YOUR API KEY HERE
+#   api_secret: PUT YOUR API SECRET HERE
