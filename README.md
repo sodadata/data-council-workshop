@@ -5,6 +5,14 @@
 * Python 3.8+
 * Docker
 
+## Get this repository
+
+Navigate to [https://go.soda.io/dcw](https://github.com/sodadata/data_council_workshop)
+
+Clone the repository with git or download the zip file. 
+
+![Where to download](images/getting-the-workshop-files.png)
+
 ## Asking for help
 
 To get assistence during the workshop, the best way is to ask on the Soda Community Slack.
@@ -100,3 +108,21 @@ Run SodaCL file `checks/03_analyst_use_cases.yml`
 ```shell
 soda scan -c configuration/configuration.yml -d workshop_ds checks/03_analyst_use_cases.yml
 ```
+
+## Configuring the database in IntelliJ or Pycharm
+
+This section is optional and only needed when you want to connect your PyCharm or 
+IntelliJ to the Postgres DB containing the demo data.  Feel free to use any other 
+DB browser of your choice.
+
+Host: `localhost`
+Port: `5432`
+Database: `demo`
+Username: `soda`
+Password not necessary
+
+Or
+
+URL: `jdbc:postgresql://localhost:5432/demo`
+
+![Database configuration in PyCharm](images/intellij-postgres-connection-details.png)
