@@ -129,9 +129,11 @@ soda scan -c configuration/configuration.yml -d workshop_ds checks/03_analyst_us
 ## Feedback
 
 As this is the initial public release of our new SodaCL language, we want to hear 
-what you think.  Please give us your feedback on the 
+what you think.  Please give us your feedback in a new issue.  Here a
 
-Or log [a new issue in our GitHub repo](https://github.com/sodadata/soda-core/issues/new)
+* Do you 
+
+Or log [a new issue in our GitHub repo](https://github.com/sodadata/data-council-workshop/issues/new)
 
 Next, proceed to the more advanced and cool checks
 
