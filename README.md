@@ -7,7 +7,7 @@
 
 ## Get this repository
 
-Navigate to [https://go.soda.io/dcw](https://github.com/sodadata/data_council_workshop)
+Navigate to [https://go.soda.io/dcw](https://github.com/sodadata/data-council-workshop)
 
 Clone the repository with git or download the zip file. 
 
@@ -56,7 +56,7 @@ docker-compose up
 You should see output like
 
 ```
-[data_council_workshop] scripts/02_start_postgres.sh 
+[data-council-workshop] scripts/02_start_postgres.sh 
 Starting postgres_demo_data_soda-sql-postgres_1 ... done
 Attaching to postgres_demo_data_soda-sql-postgres_1
 soda-sql-postgres_1  | ********************************************************************************
@@ -114,10 +114,6 @@ If you encounter issues:
 
 Ask the community on [Slack](https://go.soda.io/slack).  Our experts will be monitoring the channel extra closely during the workshop.
 
-Or log [a new issue in our GitHub repo](https://github.com/sodadata/soda-core/issues/new)
-
-Next, proceed to the more advanced and cool checks
-
 Run SodaCL file `checks/02_advanced_and_cool.yml` 
 ```shell
 soda scan -c configuration/configuration.yml -d workshop_ds checks/02_advanced_and_cool.yml
@@ -129,6 +125,17 @@ Run SodaCL file `checks/03_analyst_use_cases.yml`
 ```shell
 soda scan -c configuration/configuration.yml -d workshop_ds checks/03_analyst_use_cases.yml
 ```
+
+## Feedback
+
+As this is the initial public release of our new SodaCL language, we want to hear 
+what you think.  Please give us your feedback on the 
+
+Or log [a new issue in our GitHub repo](https://github.com/sodadata/soda-core/issues/new)
+
+Next, proceed to the more advanced and cool checks
+
+
 
 ## Configuring the database in IntelliJ or Pycharm
 
