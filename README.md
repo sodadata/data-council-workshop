@@ -15,18 +15,16 @@ Clone the repository with git or download the zip file.
 
 ## Asking for help
 
-To get assistence during the workshop, the best way is to ask on the Soda Community Slack.
+To get assistence during the workshop, ask on the Soda Community Slack.
 
 Register for the community Slack: [https://go.soda.io/slack](https://go.soda.io/slack)
 
 And use [the data-council-workshop channel](https://soda-community.slack.com/archives/C0378BFA2P9)
 
-## The documentation
+## The Soda Core documentation
 
 In [the Soda Core documentation](https://docs.soda.io/soda-core/overview.html), you can find all information on how to get the CLI or library installed
 and how to use the open source project.
-
-In [the SodaCL documentation](https://docs.soda.io/soda-cl/row-count.html), you will find all information on how to write checks
 
 ## Installing the Soda CLI
 
@@ -92,17 +90,40 @@ Now you have a postgres database/warehouse with the demo data preloaded.
 
 6. Save the changes to the configuration.yml file. Close the Create API Key dialog box in Soda Cloud.
 
+## The SodaCL documentation
+
+In the next section you'll be executing and exploring SodaCL YAML files. 
+
+Check out [the SodaCL documentation](https://docs.soda.io/soda-cl/row-count.html), 
+where you will find all information on how to write checks
+
 ## Running the checks
+
+Review the SodaCL file `checks/01_basic_checks.yml` in your text/YAML editor.   
 
 Run SodaCL file `checks/01_basic_checks.yml` 
 ```shell
 soda scan -c configuration/configuration.yml -d workshop_ds checks/01_basic_checks.yml
 ```
 
+Feel free to try and make some changes.  You can refer to 
+[the SodaCL documentation](https://docs.soda.io/soda-cl/row-count.html) 
+to see the possibilities.  Try to make some updates and re-run the scan.
+
+If you encounter issues:
+
+Ask the community on [Slack](https://go.soda.io/slack).  Our experts will be monitoring the channel extra closely during the workshop.
+
+Or log [a new issue in our GitHub repo](https://github.com/sodadata/soda-core/issues/new)
+
+Next, proceed to the more advanced and cool checks
+
 Run SodaCL file `checks/02_advanced_and_cool.yml` 
 ```shell
 soda scan -c configuration/configuration.yml -d workshop_ds checks/02_advanced_and_cool.yml
 ```
+
+Finally, review the analyst use cases
 
 Run SodaCL file `checks/03_analyst_use_cases.yml` 
 ```shell
