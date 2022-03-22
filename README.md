@@ -163,7 +163,8 @@ where you will find all information on how to write checks
 
 ## Running the checks
 
-Review the SodaCL file `checks/01_basic_checks.yml` in your text/YAML editor.   
+Review the SodaCL file `checks/01_basic_checks.yml` in your text/YAML editor.
+If the checks in the file are not clear, ask us for help.
 
 Run SodaCL file `checks/01_basic_checks.yml` 
 ```shell
@@ -194,14 +195,19 @@ soda scan -c configuration/configuration.yml -d workshop_ds checks/03_analyst_us
 ## Feedback
 
 As this is the initial public release of our new SodaCL language, we want to hear 
-what you think.  
+what you think.   Here are some questions that might help formulate your feedback.
 
+* Would you recommend Soda Core to a collegue?
+  * Why or why not?
+  * Do you think it's more relevant to others in your organization?  If so, who?
+* What do you think is the most attractive feature?
+* Any specific features missing?
+* How would you compare SodaCL and Soda Core vs other open source data quality tools that you know?
+* If you do not yet plan to use it right now, what is the most important blocker for you?
 
-[Create a new issue in our GitHub repo](https://github.com/sodadata/data-council-workshop/issues/new)
+Let us know [the data-council-workshop channel](https://soda-community.slack.com/archives/C0378BFA2P9)
 
-Next, proceed to the more advanced and cool checks
-
-
+Or if you prefer, send your feedback as an email to [mailto:workshop@soda.io](workshop@soda.io)  
 
 ## Configuring the database in IntelliJ or Pycharm
 
