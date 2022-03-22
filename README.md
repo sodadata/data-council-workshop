@@ -158,7 +158,7 @@ Commands:
 
 In the next section you'll be executing and exploring SodaCL YAML files. 
 
-Check out [the SodaCL documentation](https://docs.soda.io/soda-cl/row-count.html), 
+Check out [the SodaCL documentation](https://docs.soda.io/soda-cl/soda-cl-overview.html), 
 where you will find all information on how to write checks
 
 ## Running the checks
@@ -171,7 +171,7 @@ soda scan -c configuration/configuration.yml -d workshop_ds checks/01_basic_chec
 ```
 
 Feel free to try and make some changes.  You can refer to 
-[the SodaCL documentation](https://docs.soda.io/soda-cl/row-count.html) 
+[the SodaCL documentation](https://docs.soda.io/soda-cl/soda-cl-overview.html) 
 to see the possibilities.  Try to make some updates and re-run the scan.
 
 If you encounter issues:
@@ -194,11 +194,10 @@ soda scan -c configuration/configuration.yml -d workshop_ds checks/03_analyst_us
 ## Feedback
 
 As this is the initial public release of our new SodaCL language, we want to hear 
-what you think.  Please give us your feedback in a new issue.  Here a
+what you think.  
 
-* Do you 
 
-Or log [a new issue in our GitHub repo](https://github.com/sodadata/data-council-workshop/issues/new)
+[Create a new issue in our GitHub repo](https://github.com/sodadata/data-council-workshop/issues/new)
 
 Next, proceed to the more advanced and cool checks
 
