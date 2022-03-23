@@ -182,7 +182,7 @@ the data-council-workshop channel extra closely during the workshop.
 
 Run SodaCL file `checks/02_advanced_and_cool.yml` 
 ```shell
-soda scan -c configuration/configuration.yml -d workshop_ds checks/02_advanced_and_cool.yml
+soda scan -v "START=2022-02-24 00:00:00" -v "END=2022-02-25 00:00:00" -c configuration/configuration.yml -d workshop_ds checks/02_advanced_and_cool.yml
 ```
 
 Finally, review the analyst use cases
