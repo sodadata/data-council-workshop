@@ -1,5 +1,4 @@
 checks for CUSTOMERS:
-
   # SQL-engine specific aggregation functions available! (non trivial in a generic solution)
   - stddev_samp(size) between 3.26 and 3.27
   - variance(size) between 10.65 and 10.66
@@ -22,8 +21,7 @@ checks for CUSTOMERS:
       warn: when > 1000000
       fail: when > 1500000
 
-# If we haven't easy language coverage for it (yet!), SQL gives the ultimate flexibility
-checks:
+  # If we haven't easy language coverage for it (yet!), SQL gives the ultimate flexibility
   - failed rows:
       name: High customers must have size
       fail query: |
