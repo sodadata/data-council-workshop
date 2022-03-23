@@ -2,7 +2,7 @@ checks for CUSTOMERS:
 
   # Detailed schema expectations control
   - schema:
-      fail:
+      warn:
         when required column missing: ['id', 'size', 'distance']
         when forbidden column present: ['email_address', 'pii_%']
         when wrong column type:
@@ -10,10 +10,6 @@ checks for CUSTOMERS:
           distance: integer
         when wrong column index:
           id: 0
-
-      # And/or simple notifications on any schema change:
-      warn:
-        when schema changes: any
 
   # Change over time requires a metric store
   - change avg last 7 for row_count < 50
