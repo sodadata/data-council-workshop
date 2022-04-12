@@ -158,7 +158,7 @@ Commands:
 
 In the next section you'll be executing and exploring SodaCL YAML files. 
 
-Check out [the SodaCL documentation](https://docs.soda.io/soda-cl/soda-cl-overview.html), 
+Reference the [the SodaCL documentation](https://docs.soda.io/soda-cl/soda-cl-overview.html), 
 where you will find all information on how to write checks
 
 ## Running the checks
