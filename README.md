@@ -144,7 +144,7 @@ Commands:
 
 2. Open `configuration/configuration.yml` in your favorite text editor
 
-3. Create the API key.  In your Soda Cloud account, navigate to your avatar > Profile > API Keys, then click the plus icon to generate new API keys.
+3. Create the API key.  In your Soda Cloud account, navigate to your avatar > Profile and choose the API Keys tab, then click the plus icon to generate new API keys.
 
 ![Create API key](images/soda_cloud_create_api_key.png)
 
