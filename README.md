@@ -18,6 +18,12 @@ And use [the data-council-workshop channel](https://soda-community.slack.com/arc
 In [the Soda Core documentation](https://docs.soda.io/soda-core/overview.html), you can find all information on how to get the CLI or library installed
 and how to use the open source project.
 
+## Get this repository
+
+Clone the repository with git or download the zip file from this page. 
+
+![Where to download](images/getting-the-workshop-files.png)
+
 ## Running the demo data docker container
 
 Before installing the Soda CLI, we will first launch the demo data docker container.
@@ -56,12 +62,6 @@ Now you will have to leave this console open until you want to stop the Postgres
 container.  
 
 To stop the container (at the end of the workshop), simply press `CTRL+C`.
-
-## Get this repository
-
-Clone the repository with git or download the zip file from this page. 
-
-![Where to download](images/getting-the-workshop-files.png)
 
 ## Installing the Soda CLI
 
